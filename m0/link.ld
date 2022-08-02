@@ -7,7 +7,7 @@ MEMORY {
     ram_memory  (!rx) : ORIGIN = 0x62038000, LENGTH = 32K
     xram_memory (!rx) : ORIGIN = 0x40000000, LENGTH = 16K
 }
-PROVIDE(stext = 0x50100000);
+PROVIDE(stext = 0x90000000);
 
 SECTIONS {
     .text stext : {
