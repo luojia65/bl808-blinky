@@ -49,7 +49,7 @@ impl BuildArgs {
     fn target(&self) -> &str {
         self.target
             .as_ref()
-            .map_or("riscv64imac-unknown-none-elf", |s| s.as_str())
+            .map_or("riscv32imac-unknown-none-elf", |s| s.as_str())
     }
 
     fn arch(&self) -> &str {

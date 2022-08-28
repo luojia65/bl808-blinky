@@ -1,13 +1,13 @@
 OUTPUT_ARCH(RISCV)
 ENTRY(_start)
 MEMORY {
-    xip_memory  (rx)  : ORIGIN = 0x90000000, LENGTH = 32M
-    itcm_memory (rx)  : ORIGIN = 0x62028000, LENGTH = 48K
-    dtcm_memory (rx)  : ORIGIN = 0x62034000, LENGTH = 16K
-    ram_memory  (!rx) : ORIGIN = 0x62038000, LENGTH = 32K
-    xram_memory (!rx) : ORIGIN = 0x40000000, LENGTH = 16K
+    xip_memory  (rx)  : ORIGIN = 0x58000000, LENGTH = 32M
+    itcm_memory (rx)  : ORIGIN = 0x3eff0000, LENGTH = 28K
+    dtcm_memory (rx)  : ORIGIN = 0x3eff7000, LENGTH = 4K
+    ram_memory  (!rx) : ORIGIN = 0x3eff8000, LENGTH = 64K
+    xram_memory (!rx) : ORIGIN = 0x40004000, LENGTH = 16K
 }
-PROVIDE(stext = 0x90000000);
+PROVIDE(stext = 0x58000000);
 
 SECTIONS {
     .text stext : {
