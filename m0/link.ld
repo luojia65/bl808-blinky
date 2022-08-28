@@ -2,10 +2,11 @@ OUTPUT_ARCH(RISCV)
 ENTRY(_start)
 MEMORY {
     xip_memory  (rx)  : ORIGIN = 0x58000000, LENGTH = 32M
-    itcm_memory (rx)  : ORIGIN = 0x3eff0000, LENGTH = 28K
-    dtcm_memory (rx)  : ORIGIN = 0x3eff7000, LENGTH = 4K
-    ram_memory  (!rx) : ORIGIN = 0x3eff8000, LENGTH = 64K
-    xram_memory (!rx) : ORIGIN = 0x40004000, LENGTH = 16K
+    itcm_memory (rx)  : ORIGIN = 0x62028000, LENGTH = 28K
+    dtcm_memory (rx)  : ORIGIN = 0x6202F000, LENGTH = 4K
+    nocache_ram_memory (!rx) : ORIGIN = 0x22030000, LENGTH = 0K
+    ram_memory  (!rx) : ORIGIN = 0x62030000, LENGTH = 160K
+    xram_memory  (!rx) : ORIGIN = 0x40000000, LENGTH = 16K
 }
 PROVIDE(stext = 0x58000000);
 

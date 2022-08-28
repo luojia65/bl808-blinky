@@ -4,7 +4,7 @@ D:\RustSBI\bl808-blinky\target\riscv32imac-unknown-none-elf\release\bl808-blinky
 Disassembly of section .text:
 
 58000000 <stext>:
-58000000: 17 81 ff e6  	auipc	sp, 946168
+58000000: 17 01 03 0a  	auipc	sp, 41008
 58000004: 13 01 01 00  	mv	sp, sp
 58000008: 93 02 00 40  	li	t0, 1024
 5800000c: 16 91        	add	sp, sp, t0

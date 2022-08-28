@@ -1,3 +1,6 @@
 [workspace]
 members = ["m0", "xtask"]
 default-members = ["xtask"]
+
+[patch.crates-io]
+bl808-pac = { path = "../bl808-pac" }
