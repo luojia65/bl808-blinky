@@ -26,15 +26,15 @@ unsafe extern "C" fn entry() -> ! {
 }
 
 extern "C" fn main() {
-    let p = bl808_pac::Peripherals::take().unwrap();
+    let p = unsafe { bl808_pac::Peripherals::steal() };
     // p.HBN.global.modify(|_, w| w.root_clock().xtal_xtal().uart_clock_1().xclk());
-    p.GLB.gpio_config[1].modify(|_, w| w
+    p.GLB.gpio_config[8].modify(|_, w| w
         .pin_mode().output()
         .output_function().set_bit()
         .input_function().clear_bit()
         .pull_up().set_bit()
     );
-    p.GLB.gpio_config[1].modify(|_, w| w.output_set().set_bit())
+    p.GLB.gpio_config[8].modify(|_, w| w.output_set().clear_bit())
 }
 
 extern "C" fn finalize() {
