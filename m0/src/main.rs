@@ -39,7 +39,7 @@ extern "C" fn main() {
 
 extern "C" fn finalize() {
     loop {
-        core::hint::spin_loop(); // todo
+        unsafe { asm!("wfi") };
     }
 }
 

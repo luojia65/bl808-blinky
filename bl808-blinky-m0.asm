@@ -34,6 +34,6 @@ Disassembly of section .text:
 58000056: 82 80        	ret
 
 58000058 <_ZN15bl808_blinky_m08finalize17hb5e236640154f1faE>:
-58000058: 0f 00 00 01  	fence	w, 0
+58000058: 73 00 50 10  	wfi	
 5800005c: f5 bf        	j	0x58000058 <_ZN15bl808_blinky_m08finalize17hb5e236640154f1faE>
 5800005e: 00 00        	unimp	
